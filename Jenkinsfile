@@ -26,12 +26,6 @@ pipeline{
           }
         }
 
-        stage('job3') {
-          steps {
-            build job: 'job3'
-          }
-        }
-
       }
     }
   }
