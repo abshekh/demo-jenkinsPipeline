@@ -2,12 +2,13 @@ pipeline{
   agent any
 
   stages {
+    stage('seed-jobs') {
+      build job: 'seedJobs'
+
+    }
+    
     stage('Running all the jobs in parallel') {
 
-      stage('seed-jobs') {
-        build job: 'seedJobs'
-
-      }
 
       parallel {
         stage('job1') {
