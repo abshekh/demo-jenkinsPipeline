@@ -4,6 +4,11 @@ pipeline{
   stages {
     stage('Running all the jobs in parallel') {
 
+      stage('seed-jobs') {
+        build job: 'seedJobs'
+
+      }
+
       parallel {
         stage('job1') {
           steps {
@@ -22,7 +27,7 @@ pipeline{
             build job: 'job3'
           }
         }
-        
+
       }
     }
   }
