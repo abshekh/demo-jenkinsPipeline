@@ -5,7 +5,7 @@ pipeline{
 
     stage('echo') {
       steps {
-        echo 'job1'
+        echo 'changed job1'
       }
     }
 
